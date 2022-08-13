@@ -1,0 +1,457 @@
+@media screen and (max-width: 820px) {
+    .icon{
+        display: block;
+    }
+
+    
+
+    .header-top .container .ataturk,.meb-baslik,.okul-baslik{
+        display: none;
+    }
+
+    .header-top .header-container .logo{
+        display: none;
+        
+    }
+
+    .footer .container{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .okulumuz .container-okul ul li{
+        border: 0;
+        margin: 0;
+    }
+
+    .okulumuz .container-okul ul{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 1rem;
+        
+    }
+    
+    .baglantilar ul{
+        justify-content: center;
+        display: flex;
+        flex-wrap: wrap;
+        
+    }
+
+    .baglantilar .container-baglanti{
+        display: flex;
+        justify-content: center;
+    }
+
+    .okulumuz .container .okulumuz-title{
+        justify-content: center;
+        margin: 0;
+    }
+
+    .okulumuz .container-okul ul li {
+        display: flex;
+    }
+
+    .footer .container .konum a{
+        display: flex;
+        justify-content: center;
+        margin: 1rem;
+    }
+
+    .footer  .title{
+        margin-top: 2rem;
+    }
+
+    .header .container .haberler .card img{
+        width: 105%;
+        
+    }
+
+    .header .container .haberler .card .konu-baslik{
+        font-size: 1rem;
+    }
+    .header .container .haberler .card .icerik{
+        font-size: 1.1rem;
+    }
+
+    .header .container .haberler .container{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+   }
+   .header .container{
+       margin: 2rem;
+   }
+
+
+   #main-nav .container{
+       position: absolute;
+       background: #54BAB9;
+       max-width: 80%;
+       width: 100%;
+       top: 0;
+       left:-100%;
+       height: 450px;
+       padding: 1rem;
+       z-index: 1;
+       
+       transition:  all 0.5s ease;
+    }
+
+    #main-nav{
+        padding: .9rem;
+    }
+    
+    .icon{
+        margin: .5rem;
+        width: 1px;
+        
+    }
+
+    .header-okulumuz .header-container .container .okul-nav a{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    
+    #main-nav ul {
+        display: block;
+   }
+
+   
+
+   nav .container .side_bar_logo{
+       display: flex;
+       
+       align-items: center;
+       justify-content: space-between;
+   }
+
+   nav .container .side_bar_logo .carpi{
+    display: block;
+    color: #fff;
+    font-size: 2rem;
+   }
+
+   nav .container .logo_name{
+       display: block;
+       color: #fff;
+       font-size: 2rem;
+   }
+
+   #main-nav ul{
+       display: flex;
+       flex-wrap: wrap;
+       align-items: flex-start;
+       margin-top: 20px;
+       justify-content: center;
+   }
+
+   
+
+
+   .header .ogretmenler-container .container .teach{
+       display: flex;
+       flex-direction: row;
+       flex-wrap: wrap;
+   }   
+
+   ul li{
+       margin: 1rem;
+   }
+
+    .footer img{
+        display: flex;
+        justify-content: center;
+    }
+
+    .header-idari .container .yardimcilar {
+        display: flex;
+        flex-direction: column;
+        margin: 2rem;
+    }
+
+    .header-idari .container{
+        margin: 0;
+    }
+
+    .header-idari .container .mudur {
+        margin: 2rem;
+    }
+
+    .header-tarihce .header-container .container{
+        margin: 1rem;
+    }
+
+    .header-tarihce .baslik{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+   
+
+    .header .kurucular-container .container img{
+        width: 70%;
+    } 
+    
+
+    .header .ogretmenler-container .container .baslik{
+        display: flex;
+        justify-content: center;
+    }
+
+    .header .kurucular-container .container .text{
+        margin: 0;   
+    }
+
+    .header .header-ogrenci-container .container{
+        margin:1rem;
+    }
+
+    .header .header-ogrenci-container .container ul{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .header .header-alan-container .container{
+        margin: 1rem;
+    }
+
+    .header .header-alan-container .container ul{
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+    .header .header-alan-container .container ul .endus{
+        width: 100%;
+    }
+
+    .header .header-mesleki-container .container{
+        margin: .5rem;
+    }    
+
+    .header .header-mesleki-container .container .baslik{
+        font-size: .7rem;
+    }
+    
+    .header .header-ata-container .container img{
+        width: 100%;
+        height: 50%;
+    }
+
+    .header .header-ata-container .container{
+        margin: .5rem;
+    }
+
+    .header .header-tahta-container .container img{
+        width: 95%;
+        height: 50%;
+    }
+
+    .header .bil-tek-container .container ul{
+        display: flex;
+        flex-direction: column;
+        margin: .5rem;
+    }
+
+    .header .header-tahta-container .container{
+        margin: .5rem;
+        
+    }
+
+    .header-bilisim-container .bolum img{
+        width: 90%;
+        
+    }
+
+    .header .header-bilisim-container .container .baslik{
+        display: flex;
+        font-size: .8rem;
+        justify-content: center;
+
+    }
+
+    .header .header-bilisim-container .container{
+        margin: .5rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .header .header-bilisim-container .container .dersler{
+        margin: 0;
+        padding: 2rem;
+        font-size: .4rem;        
+        justify-items: center;
+    }
+
+    .header .header-elektrik-container .container{
+        margin: .5rem;
+    }
+
+    .header .header-otomasyon-container .container{
+        margin: .5rem;
+    }
+
+    .header .header-patent-container .container img{
+        width: 90%;
+        height: 40%;
+    }
+    .header .header-patent-container .container{
+        margin: .5rem;
+    }
+    .header .header-patent-container .container h1{
+        margin: .5rem;
+    }
+    .header .header-teknofest-container .container img{
+        width: 90%;
+        height: 70%;
+    }
+
+    .header .header-teknofest-container .container h3{
+        margin: .5rem;
+    }
+    
+    .header .header-teknofest-container .container{
+        margin: .5rem;
+    }
+    .header .header-teknofest-container .container h2{
+        font-size: .8rem;
+    }
+
+    .header .header-teknofest-container .container a{
+        font-size: .7rem;
+        display: none;
+    }
+
+    .header .header-teknofest-container .container p{
+        margin: 1rem;
+        
+    }
+
+    .mezuniyet ul{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .header .header-doner-sermaye-container .container img{
+        width: 90%;
+    }
+
+    .header .header-doner-sermaye-container .container {
+        margin: .5rem;
+    }
+
+    .header .header-doner-sermaye-container .container h1{
+        margin: .5rem;
+    }
+
+    .header .header-doner-sermaye-container .container h2{
+        margin: .5rem;
+    }
+
+  }
+  
+  
+
+  @media screen and (max-width:490px) {
+
+    .header .ogretmenler-container .container{
+        margin: 1rem;
+    }
+      
+    .header .kurucular-container .container{
+        margin: 0;
+    }
+
+    .header-okulumuz .header-container .container .baslik {
+        font-size: .4rem;
+    }
+
+    .header .vizyon-misyon-container .container{
+        margin: 0;
+    }
+
+    .header .vizyon-misyon-container .container .baslik{
+        font-size: .5rem;
+    }
+
+    .header .vizyon-misyon-container .container .misyon{
+        margin: .5rem;
+    }
+
+    .header .vizyon-misyon-container .container .temel-ilke{
+        margin: .5rem;
+    }
+
+    .header .vizyon-misyon-container .container .vizyon{
+        margin: .5rem;
+    }
+    
+
+
+    .header .vizyon-misyon-container .container .misyon h1{
+        font-size: .9rem;
+    }
+
+    .header .vizyon-misyon-container .container  .baslik{
+        display: flex;
+        justify-content: center;
+        
+    }
+    .okulumuz .container-okul ul .harita {
+        display: none;
+    }
+
+    .header-idari .container .mudur {
+        margin: 0;
+    }
+
+    .okulumuz .container-okul .okul-title-content{
+        display: none;
+        
+    }
+    .haberler .title{
+        font-size: 1.4rem;
+    }
+
+    .header-okulumuz .header-container .container img{
+        width: 60%;
+    }
+
+    
+
+    .okulumuz .container-okul h1{
+        font-size: 1rem;
+    }
+
+    .header-idari .container .yardimcilar {
+        
+        margin: 0 ;
+    }
+
+    
+    .header-okulumuz .header-container .container{
+        margin: .5rem;
+    }
+
+    
+
+    .footer .title{
+        margin-left: 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    
+
+    
+
+    
+  }
+    
+
+  

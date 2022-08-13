@@ -1,0 +1,38 @@
+
+
+.n{
+    transform: rotate(180deg);/*kuzey*/
+}
+
+.e{
+    transform: rotate(270deg); /*doğu*/
+}
+
+.s{
+    transform: rotate(360deg); /*güney*/
+    
+}
+
+
+.w{
+    transform: rotate(90deg); /*batı*/
+}
+
+
+
+
+.ne{
+    transform: rotate(215deg); /*kuzeyDoğu*/
+}
+
+.se{
+    transform: rotate(310deg); /*güneyDoğu*/
+}
+
+.sw{
+    transform: rotate(50deg); /*güneyBatı*/
+}
+
+.nw{
+    transform: rotate(140deg); /*kuzeyBatı*/
+}
