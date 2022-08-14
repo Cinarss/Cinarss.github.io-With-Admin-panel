@@ -1,3 +1,23 @@
+<?php 
+include "admin/connect.php";
+
+$general=$db->prepare("SELECT * FROM general_settings WHERE id=1");
+$general->execute();
+$generalGet=$general->fetch(PDO::FETCH_ASSOC);
+
+
+$info=$db->prepare("SELECT * FROM info WHERE id=1");
+$info->execute();
+$infoGet=$info->fetch(PDO::FETCH_ASSOC);
+
+
+$project=$db->prepare("SELECT * from project");
+$project->execute();
+
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,13 +25,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <meta name="description" content="<?php echo $generalGet["description"];?>">
+    <meta name="author" content="<?php echo $generalGet["author"]; ?>">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="icon" href="images/planet.png">
-    <title>Cinar Sak</title>
+    <title><?php echo $generalGet["title"]; ?></title>
 </head>
 <body class="body">
     <button
@@ -51,9 +73,7 @@
         <br>
         <div class="row mt-3 justify-content-center">
             <img src="images/about-me.gif" class="rounded col-sm-5 " alt=""> 
-            <p class="col-sm-6 text-white-50">Hello! my name is Cinar. 
-                                I'm a 16 year old full-stack developer living in Turkey.
-                                I started programming 2 years ago with python This much :) </p>
+            <p class="col-sm-6 text-white-50"> <?php echo $generalGet["about"]; ?> </p>
 
 
         </div>
@@ -66,16 +86,16 @@
         <div class="container justify-content-center">
             <div class="row justify-content-center scroll-element js-scroll fade-in-bottom">
                 <div class="col-md-3">
-                    <i class="fa-solid fa-clock mr-1"></i>2
+                    <i class="fa-solid fa-clock mr-1"></i><?php echo $infoGet["year"] ?>
                     <h5 class="text-white" id="yazi">Yıldır geliştirici</h5>                    
                 </div>
                     <div class="col-md-3">
-                        <i class="fa-solid fa-briefcase mr-1 "></i> 6
+                        <i class="fa-solid fa-briefcase mr-1 "></i> <?php echo $infoGet["work"] ?>
                         <h5 class="text-white" id="yazi">Şuan geliştirilen ve aktif olan site</h5>
                     </div>
 
                     <div class="col-md-3">
-                        <i class="fa-solid fa-fire mr-1"></i>13
+                        <i class="fa-solid fa-fire mr-1"></i><?php echo $infoGet["repo"] ?>
                         <h5 class="text-white" id="yazi">Github Repo</h5>
                     </div>
             </div>
@@ -84,25 +104,35 @@
 
 
     <br><br>
+
     <div class="container mt-3 justify-content-center scroll-element js-scroll fade-in-bottom" id="projects">
         <h1 class="text-center mb-2">My Some Projects</h1>
         <br><br>
         <div class="row justify-content-center">
+
+        <?php 
+        while($projcetGet=$project->fetch(PDO::FETCH_ASSOC)){ ?>
+
+        
+        
             <div class="col-md-4 mt-3 ">
-                <h3 class="text-center text-secondary">School Website</h3>
+                <h3 class="text-center text-secondary"><?php echo $projcetGet["title"]; ?></h3>
                 <br>
-                <a href="https://github.com/Cinarss/website-school/tree/main/okul-website" target="_blank"><div class="image rounded-lg"> <img id="img" src="images/okul-website.png" alt=""> <i class="fa fa-search fa-3x" id="ico"></i> </div></a>
+                <a href="<?php echo $projcetGet["url"] ?>" target="_blank"><div class="image rounded-lg"> <img id="img" src="<?php echo $projcetGet["image"] ?>" alt=""> <i class="fa fa-search fa-3x" id="ico"></i> </div></a>
             </div>
-            <div class="col-md-4 mt-3 ">
+                <?php }?>
+            <!-- <div class="col-md-4 mt-3 ">
                 <h3 class="text-center text-secondary">Izmir Dalgic Pompa</h3>
                 <br>
                 <a href="http://izmirdalgicpompa.com" target="_blank"><div class="image rounded-lg"> <img id="img" src="images/dalgicpompa.png" alt=""> <i class="fa fa-search fa-3x" id="ico"></i> </div></a>
             </div>
+
             <div class="col-md-4 mt-3 ">
                 <h3 class="text-center text-secondary">Flutter Application</h3>
                 <br>
                 <a href="https://github.com/Cinarss/Teknofest_C1" target="_blank"><div class="image rounded-lg"> <img id="img" src="images/teknofestc1.png"  alt=""> <i class="fa fa-search fa-3x" id="ico"></i> </div></a>
-            </div>
+            </div> -->
+
         </div>
 </div>
 
