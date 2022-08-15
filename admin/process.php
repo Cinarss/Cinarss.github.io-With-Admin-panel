@@ -1,4 +1,7 @@
 <?php
+ob_start();
+session_start();
+
 include "connect.php";
 
 
@@ -191,6 +194,33 @@ if(isset($_POST["projectİmageUpdate"])){
 
   }
 
+
+/*Admin Login */
+/*-------------------------------------------------------------------------- */
+
+  if(isset($_POST["adminLogin"])){
+    $username= $_POST["username"];
+    $password = $_POST["password"];
+
+    $admin=$db->prepare("SELECT * from admin where username=:username and password=:password ");
+    $admin->execute(array(
+        "username" => $username,
+        "password" => $password
+    ));
+    $say=$admin->rowCount();
+
+    if($say == 1){
+       $_SESSION["username"] = $username;
+       Header("Location:index.php?login=okay");
+       exit;
+
+    }else{
+
+        Header("Location:login.php?login=nope");
+        exit;
+
+    }
+  }
 
 
 ?>

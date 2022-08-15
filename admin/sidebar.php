@@ -1,5 +1,23 @@
+<?php 
+ob_start();
+session_start();
+
+include "connect.php";
+
+$admin=$db->prepare("SELECT * FROM admin WHERE username=:username");
+$admin->execute(array(
+   "username" => $_SESSION["username"]
+));
+
+$say=$admin->rowCount();
+
+$adminGet=$admin->fetch(PDO::FETCH_ASSOC);
 
 
+if($say == 0){
+   Header("Location:login.php?access=nope");
+}
+?>
 
 <nav id="sidebar">
                <div class="sidebar_blog_1">
